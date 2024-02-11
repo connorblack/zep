@@ -1,7 +1,7 @@
 services:
   - type: web
     name: zep
-    autoDeploy: false
+    autoDeploy: true
     env: image
     image:
       url: ghcr.io/getzep/zep-cloud:latest
@@ -26,13 +26,13 @@ services:
         sync: false
     region: 'ohio'
 
-  - type: pserv
-    name: zep-nlp
-    autoDeploy: false
-    env: image
-    image:
-      url: ghcr.io/getzep/zep-nlp-server:latest
-    region: 'ohio'
+  # - type: pserv
+  #   name: zep-nlp
+  #   autoDeploy: true
+  #   env: image
+  #   image:
+  #     url: ghcr.io/getzep/zep-nlp-server:latest
+  #   region: 'ohio'
 
 databases:
   - name: zep-postgres
